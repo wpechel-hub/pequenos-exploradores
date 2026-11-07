@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1B1E4B">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Exploradores">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Privacidade · Privacy · Privacidad</title>
 <link rel="icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,5 +67,6 @@ applyI18n();
 document.getElementById("topr").appendChild(langPicker());
 document.querySelectorAll("article").forEach((a) => { a.hidden = a.dataset.lang !== LANG; });
 </script>
+<script type="module" src="/js/pwa.js"></script>
 </body>
 </html>

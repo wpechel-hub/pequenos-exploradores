@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1B1E4B">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Exploradores">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>30 dias no espaço</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
@@ -108,6 +115,9 @@ footer{color:var(--soft);font-size:14px;text-align:center;margin-top:24px}
 }
 .story{background:color-mix(in srgb,var(--sun) 18%,var(--card));border:2px solid var(--sun)}
 .story p{font-size:18px}
+header.hero .txt{position:static;padding:0 20px 20px;margin-top:-28px}
+header.hero svg{height:150px;width:100%}
+@media (min-width:600px){header.hero svg{height:190px}}
 .namebox{display:none!important}
 .certbtn[hidden]{display:none!important}
 </style>
@@ -220,7 +230,7 @@ try{done=JSON.parse(localStorage.getItem(KEY)||"[]")||[]}catch(e){done=[]}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}if(window.onSave)window.onSave(done)}
 
 const grid=document.getElementById("grid"),sheet=document.getElementById("sheet"),panel=document.getElementById("panel");
-document.getElementById("hero").innerHTML=`<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="300" fill="#1B1E4B"/>${stars(42,600,300,90)}${planet(510,70,40,"#E8CF8A","#C9A45A",{stripes:1,ring:"#F5E6B8",ringBack:"#F5E6B8"})}${rocket(420,120,.9)}${moonPhase(80,60,26,.5)}</svg><div class="txt"><h1>${U.title}</h1><p>${U.sub}</p></div>`;
+document.getElementById("hero").innerHTML=`<svg preserveAspectRatio="xMaxYMin slice" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg"><rect width="600" height="360" fill="#1B1E4B"/>${stars(42,600,360,100)}${planet(520,62,34,"#E8CF8A","#C9A45A",{stripes:1,ring:"#F5E6B8",ringBack:"#F5E6B8"})}${rocket(410,78,.62)}${moonPhase(70,52,22,.5)}</svg><div class="txt"><h1>${U.title}</h1><p>${U.sub}</p></div>`;
 
 function render(){
   const next=[...Array(30).keys()].find(i=>!done.includes(i));
@@ -336,5 +346,6 @@ function toPNG(svg){return new Promise((res,rej)=>{const img=new Image();img.onl
 showNome();render();
 </script>
 <script type="module" src="/js/serie.js?s=espaco"></script>
+<script type="module" src="/js/pwa.js"></script>
 </body>
 </html>

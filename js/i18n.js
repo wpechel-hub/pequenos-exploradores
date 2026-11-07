@@ -23,6 +23,9 @@ export function setLang(l) {
 
 const T = {
 pt: {
+  "pwa.title": "Instale o app", "pwa.install": "Instalar", "pwa.close": "Fechar",
+  "pwa.android": "Coloque o Pequenos Exploradores na tela inicial e abra com um toque.",
+  "pwa.ios": "No Safari, toque em Compartilhar (quadrado com seta ↑) e depois em “Adicionar à Tela de Início”.",
   "brand": "Pequenos Exploradores",
   "lang": "Idioma",
   "nav.login": "Entrar", "nav.logout": "Sair", "nav.panel": "Painel",
@@ -69,6 +72,9 @@ pt: {
   "e.generic": "Algo deu errado. Tente de novo.",
 },
 en: {
+  "pwa.title": "Install the app", "pwa.install": "Install", "pwa.close": "Close",
+  "pwa.android": "Put Little Explorers on your home screen and open it with one tap.",
+  "pwa.ios": "In Safari, tap Share (the square with an ↑ arrow), then “Add to Home Screen”.",
   "brand": "Little Explorers",
   "lang": "Language",
   "nav.login": "Log in", "nav.logout": "Log out", "nav.panel": "Dashboard",
@@ -115,6 +121,9 @@ en: {
   "e.generic": "Something went wrong. Please try again.",
 },
 es: {
+  "pwa.title": "Instala la app", "pwa.install": "Instalar", "pwa.close": "Cerrar",
+  "pwa.android": "Pon Pequeños Exploradores en tu pantalla de inicio y ábrelo con un toque.",
+  "pwa.ios": "En Safari, toca Compartir (el cuadrado con la flecha ↑) y luego “Agregar a inicio”.",
   "brand": "Pequeños Exploradores",
   "lang": "Idioma",
   "nav.login": "Entrar", "nav.logout": "Salir", "nav.panel": "Panel",

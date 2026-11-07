@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1B1E4B">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Exploradores">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Pequenos Exploradores · Little Explorers</title>
 <meta name="description" content="Séries de curiosidades para fazer em família · Fun-fact series for families · Series de curiosidades para familias.">
 <link rel="icon" href="/favicon.svg">
@@ -37,7 +44,7 @@
 .below{display:flex;justify-content:space-between;gap:10px;margin-top:12px;flex-wrap:wrap}
 </style>
 </head>
-<body>
+<body data-install="1">
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/"><img src="/favicon.svg" alt=""><span data-i18n="brand">Pequenos Exploradores</span></a>
@@ -151,5 +158,6 @@ $("forgot").onclick = async () => {
   msg(error ? errMsg(error) : t("m.forgotSent"), !error);
 };
 </script>
+<script type="module" src="/js/pwa.js"></script>
 </body>
 </html>
