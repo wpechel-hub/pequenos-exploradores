@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacidade · Privacy · Privacidad</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<style>article{max-width:720px;margin:10px auto 0}article h1{font-size:34px;margin-bottom:10px}article h2{font-size:22px;margin:22px 0 6px}article p,article li{color:var(--ink)}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><a class="brand" href="/"><img src="/favicon.svg" alt=""><span data-i18n="brand"></span></a><div class="topr" id="topr"></div></header>
+
+  <article data-lang="pt">
+    <h1>Privacidade</h1>
+    <p>Este site guarda o mínimo necessário para funcionar.</p>
+    <h2>O que guardamos</h2>
+    <ul><li>O email e a senha do adulto que cria a conta (a senha fica criptografada).</li><li>O primeiro nome ou apelido de cada criança, como o adulto escrever.</li><li>Quais dias de cada série já foram concluídos.</li></ul>
+    <h2>O que não fazemos</h2>
+    <ul><li>Não pedimos sobrenome, idade, foto nem endereço das crianças.</li><li>Não vendemos nem compartilhamos dados com anunciantes.</li><li>Não mostramos anúncios.</li></ul>
+    <h2>Seus direitos</h2>
+    <p>Você pode apagar uma criança ou a conta inteira a qualquer momento, no painel. Ao apagar a conta, todos os dados são removidos.</p>
+    <h2>Segurança dos experimentos</h2>
+    <p>Todos os experimentos e atividades devem ser feitos com a supervisão de um adulto. Fique atento a alergias alimentares e a objetos pequenos com crianças menores.</p>
+  </article>
+
+  <article data-lang="en">
+    <h1>Privacy</h1>
+    <p>This site stores only what it needs to work.</p>
+    <h2>What we store</h2>
+    <ul><li>The email and password of the adult who creates the account (the password is encrypted).</li><li>Each child's first name or nickname, as the adult types it.</li><li>Which days of each series have been completed.</li></ul>
+    <h2>What we don't do</h2>
+    <ul><li>We don't ask for children's last names, ages, photos or addresses.</li><li>We don't sell or share data with advertisers.</li><li>We don't show ads.</li></ul>
+    <h2>Your rights</h2>
+    <p>You can delete a child or your whole account at any time from the dashboard. Deleting the account removes all of its data.</p>
+    <h2>Experiment safety</h2>
+    <p>All experiments and activities should be done with adult supervision. Watch out for food allergies and small objects around younger children.</p>
+  </article>
+
+  <article data-lang="es">
+    <h1>Privacidad</h1>
+    <p>Este sitio guarda solo lo necesario para funcionar.</p>
+    <h2>Qué guardamos</h2>
+    <ul><li>El correo y la contraseña del adulto que crea la cuenta (la contraseña se guarda cifrada).</li><li>El primer nombre o apodo de cada niño, como lo escriba el adulto.</li><li>Qué días de cada serie ya se completaron.</li></ul>
+    <h2>Qué no hacemos</h2>
+    <ul><li>No pedimos apellidos, edad, fotos ni dirección de los niños.</li><li>No vendemos ni compartimos datos con anunciantes.</li><li>No mostramos anuncios.</li></ul>
+    <h2>Tus derechos</h2>
+    <p>Puedes borrar a un niño o tu cuenta completa en cualquier momento desde el panel. Al borrar la cuenta, se eliminan todos sus datos.</p>
+    <h2>Seguridad de los experimentos</h2>
+    <p>Todos los experimentos y actividades deben hacerse con la supervisión de un adulto. Cuidado con las alergias alimentarias y los objetos pequeños con niños más chicos.</p>
+  </article>
+  <footer><a href="/" data-i18n="nav.login"></a></footer>
+</div>
+<script type="module">
+import { LANG, applyI18n, langPicker } from "/js/i18n.js";
+applyI18n();
+document.getElementById("topr").appendChild(langPicker());
+document.querySelectorAll("article").forEach((a) => { a.hidden = a.dataset.lang !== LANG; });
+</script>
+</body>
+</html>

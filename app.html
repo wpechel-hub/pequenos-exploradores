@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pequenos Exploradores</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<style>
+h2.sec{font-size:26px;margin:18px 2px 10px}
+.kids{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
+.kid{appearance:none;border:3px solid var(--line);background:var(--card);color:var(--ink);border-radius:20px;padding:10px 16px 10px 10px;display:flex;align-items:center;gap:10px;cursor:pointer;font:inherit;font-weight:700;font-size:18px;min-height:56px}
+.kid .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:20px;flex:none}
+.kid[aria-pressed="true"]{border-color:var(--navy);box-shadow:0 0 0 3px color-mix(in srgb,var(--sun) 60%,transparent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .kid[aria-pressed="true"]{border-color:var(--sun)}}
+.addform{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.addform input{flex:1;min-width:180px}
+.series{display:grid;gap:14px;margin-top:6px}
+@media (min-width:760px){.series{grid-template-columns:1fr 1fr}}
+.sc{border-radius:24px;color:#fff;padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;position:relative;overflow:hidden;min-height:170px}
+.sc .e{font-size:40px;line-height:1}
+.sc b{font-family:"Baloo 2",system-ui,sans-serif;font-size:24px;line-height:1.1}
+.sc small{color:rgba(255,255,255,.82);font-size:15px}
+.sc .bar{height:12px;background:rgba(255,255,255,.22);border-radius:8px;overflow:hidden}
+.sc .bar i{display:block;height:100%;border-radius:8px}
+.sc .row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-family:"Baloo 2",sans-serif;font-weight:700}
+.sc .cta{background:#fff;color:#1B1E4B;border-radius:14px;padding:6px 14px}
+.sc.bonus{margin-left:22px;min-height:auto}
+.sc.bonus .tag{position:absolute;top:12px;right:14px;background:rgba(255,255,255,.2);border-radius:10px;padding:2px 10px;font-size:13px;font-weight:700}
+.manage{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+.acct{margin-top:30px;padding-top:16px;border-top:2px dashed var(--line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.loading{color:var(--soft);padding:30px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/app"><img src="/favicon.svg" alt=""><span data-i18n="brand"></span></a>
+    <div class="topr" id="topr"><button class="btn ghost" id="logout" data-i18n="nav.logout"></button></div>
+  </header>
+
+  <p class="loading" id="loading">…</p>
+  <main id="main" class="hidden">
+    <h2 class="sec" data-i18n="app.kids"></h2>
+    <div class="kids" id="kids"></div>
+    <form class="addform" id="addForm">
+      <input type="text" id="kidName" maxlength="40" autocomplete="off" data-i18n-ph="app.kidPh" aria-label="">
+      <button class="btn main" type="submit" data-i18n="app.add"></button>
+    </form>
+    <p class="msg err" id="msg" role="status"></p>
+
+    <section id="seriesSec" class="hidden">
+      <h2 class="sec" id="seriesTitle"></h2>
+      <div class="series" id="series"></div>
+      <div class="manage">
+        <button class="btn sec" id="rename" data-i18n="app.rename"></button>
+        <button class="btn sec" id="del" data-i18n="app.delete"></button>
+      </div>
+    </section>
+
+    <div class="acct small">
+      <span class="muted"><span data-i18n="app.account"></span>: <span id="email"></span></span>
+      <button class="linkbtn" id="delAccount" data-i18n="app.deleteAccount"></button>
+    </div>
+  </main>
+  <footer><a href="/privacidade" data-i18n="f.privacy"></a></footer>
+</div>
+
+<script type="module">
+import { sb, SERIES, esc } from "/js/sb.js";
+import { t, applyI18n, langPicker, errMsg } from "/js/i18n.js";
+applyI18n();
+document.getElementById("topr").prepend(langPicker());
+document.getElementById("kidName").setAttribute("aria-label", t("app.kidName"));
+const $ = (id) => document.getElementById(id);
+const COLORS = ["#FF6F7F", "#3CC8A4", "#8C7BFF", "#FFB020", "#3C8DFF", "#E8505B"];
+let client, kids = [], progress = {}, current = null;
+
+const msg = (s) => { $("msg").textContent = s || ""; };
+function pick(id) { current = id; try { localStorage.setItem("pe-child", id); } catch (e) {} render(); }
+
+function render() {
+  $("kids").innerHTML = "";
+  kids.forEach((k, i) => {
+    const b = document.createElement("button");
+    b.className = "kid";
+    b.setAttribute("aria-pressed", String(k.id === current));
+    b.innerHTML = `<span class="av" style="background:${COLORS[i % COLORS.length]}">${esc((k.name.trim()[0] || "?").toUpperCase())}</span><span></span>`;
+    b.lastChild.textContent = k.name;
+    b.onclick = () => pick(k.id);
+    $("kids").appendChild(b);
+  });
+  if (!kids.length) {
+    const p = document.createElement("p"); p.className = "muted"; p.style.margin = "0 4px"; p.textContent = t("app.noKids");
+    $("kids").appendChild(p);
+  }
+  const kid = kids.find((k) => k.id === current);
+  $("seriesSec").classList.toggle("hidden", !kid);
+  if (!kid) return;
+  $("seriesTitle").textContent = t("app.seriesOf", { name: kid.name });
+  $("series").innerHTML = "";
+  for (const s of SERIES) {
+    const n = (progress[kid.id + "/" + s.id] || []).length;
+    const a = document.createElement("a");
+    a.className = "sc" + (s.bonusOf ? " bonus" : "");
+    a.style.background = s.bg;
+    a.href = `${s.page}?c=${encodeURIComponent(kid.id)}`;
+    const cta = n >= s.days ? t("app.done") : n ? t("app.continue") : t("app.start");
+    a.innerHTML = `${s.bonusOf ? `<span class="tag">${esc(t("app.bonus"))}</span>` : ""}<span class="e">${s.emoji}</span>
+      <span><b>${esc(t("s." + s.id))}</b><br><small>${esc(t("s." + s.id + ".d"))}</small></span>
+      <span class="bar"><i style="width:${(n / s.days) * 100}%;background:${s.accent}"></i></span>
+      <span class="row"><span>${n} ${esc(t("app.of"))} ${s.days} ${esc(t("app.days"))}</span><span class="cta">${esc(cta)} →</span></span>`;
+    $("series").appendChild(a);
+  }
+}
+
+async function load() {
+  const { data: c, error } = await client.from("children").select("id,name,created_at").order("created_at");
+  if (error) { msg(errMsg(error)); return; }
+  kids = c || [];
+  progress = {};
+  if (kids.length) {
+    const { data: p } = await client.from("progress").select("child_id,series,done").in("child_id", kids.map((k) => k.id));
+    (p || []).forEach((r) => { progress[r.child_id + "/" + r.series] = r.done || []; });
+  }
+  let saved = null; try { saved = localStorage.getItem("pe-child"); } catch (e) {}
+  current = kids.find((k) => k.id === saved)?.id || kids[0]?.id || null;
+  render();
+}
+
+(async () => {
+  try { client = await sb(); } catch (e) { location.replace("/"); return; }
+  const { data: { session } } = await client.auth.getSession();
+  if (!session) { location.replace("/"); return; }
+  $("email").textContent = session.user.email || "";
+  await load();
+  $("loading").classList.add("hidden");
+  $("main").classList.remove("hidden");
+  if (!kids.length) $("kidName").focus();
+})();
+
+$("addForm").onsubmit = async (ev) => {
+  ev.preventDefault();
+  const name = $("kidName").value.trim().slice(0, 40);
+  if (!name) { $("kidName").focus(); return; }
+  msg("");
+  const { data, error } = await client.from("children").insert({ name }).select("id").single();
+  if (error) { msg(errMsg(error)); return; }
+  $("kidName").value = "";
+  await load();
+  pick(data.id);
+};
+
+$("rename").onclick = async () => {
+  const kid = kids.find((k) => k.id === current); if (!kid) return;
+  const name = (prompt(t("app.renamePrompt"), kid.name) || "").trim().slice(0, 40);
+  if (!name || name === kid.name) return;
+  const { error } = await client.from("children").update({ name }).eq("id", kid.id);
+  if (error) return msg(errMsg(error));
+  await load();
+};
+
+$("del").onclick = async () => {
+  const kid = kids.find((k) => k.id === current); if (!kid) return;
+  if (!confirm(t("app.confirmDelete", { name: kid.name }))) return;
+  const { error } = await client.from("children").delete().eq("id", kid.id);
+  if (error) return msg(errMsg(error));
+  current = null;
+  await load();
+};
+
+$("logout").onclick = async () => { try { await client.auth.signOut(); } catch (e) {} location.replace("/"); };
+
+$("delAccount").onclick = async () => {
+  if (!confirm(t("app.confirmAccount"))) return;
+  const { error } = await client.rpc("apagar_minha_conta");
+  if (error) return msg(errMsg(error));
+  try { await client.auth.signOut(); } catch (e) {}
+  location.replace("/");
+};
+</script>
+</body>
+</html>

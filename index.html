@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pequenos Exploradores · Little Explorers</title>
+<meta name="description" content="Séries de curiosidades para fazer em família · Fun-fact series for families · Series de curiosidades para familias.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<style>
+.hero{display:grid;gap:22px;align-items:center;padding:8px 0 10px}
+@media (min-width:860px){.hero{grid-template-columns:1.15fr .85fr;gap:36px;padding:24px 0}}
+.hero h1{font-size:clamp(36px,8vw,60px);font-weight:800;letter-spacing:-.5px}
+.hero h1 span{color:var(--coral);display:block}
+.lead{font-size:19px;color:var(--soft);margin:12px 0 18px;max-width:38ch}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:6px}
+.tile{border-radius:22px;color:#fff;padding:16px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px;position:relative;overflow:hidden}
+.tile .e{font-size:34px;line-height:1;margin-bottom:auto}
+.tile b{font-family:"Baloo 2",system-ui,sans-serif;font-size:20px;line-height:1.1}
+.tile small{color:rgba(255,255,255,.82);font-size:14px}
+.tile.space{background:#1B1E4B}.tile.body{background:#5B1A3A}
+.tile.bonus{grid-column:1/-1;min-height:auto;flex-direction:row;align-items:center;gap:12px;background:#7A2A52;padding:12px 16px}
+.tile.bonus .e{margin:0;font-size:30px}
+.steps{display:grid;gap:12px;margin:26px 0 6px}
+@media (min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px}
+.step .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--sun);color:#1B1E4B;font-family:"Baloo 2",sans-serif;font-weight:800;margin-bottom:6px}
+.step h3{font-size:20px;margin-bottom:4px}
+.step p{margin:0;color:var(--soft);font-size:16px}
+.auth h2{font-size:28px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border:2px solid var(--line);border-radius:16px;padding:4px;margin:14px 0 4px}
+.tabs button{appearance:none;border:0;background:transparent;color:var(--soft);font-family:"Baloo 2",sans-serif;font-weight:700;font-size:17px;padding:8px;border-radius:12px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.auth .btn.main{width:100%;margin-top:16px}
+.below{display:flex;justify-content:space-between;gap:10px;margin-top:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/"><img src="/favicon.svg" alt=""><span data-i18n="brand">Pequenos Exploradores</span></a>
+    <div class="topr" id="topr"><a class="btn ghost" href="#entrar" data-i18n="nav.login">Entrar</a></div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1><span data-i18n="hero.a" style="color:inherit"></span><span data-i18n="hero.b"></span></h1>
+      <p class="lead" data-i18n="hero.lead"></p>
+      <div class="tiles">
+        <div class="tile space"><span class="e">🚀</span><b data-i18n="s.espaco"></b><small data-i18n="s.espaco.d"></small></div>
+        <div class="tile body"><span class="e">❤️</span><b data-i18n="s.corpo"></b><small data-i18n="s.corpo.d"></small></div>
+        <div class="tile bonus"><span class="e">👶</span><span><b data-i18n="s.bebe"></b><br><small data-i18n="s.bebe.d"></small></span></div>
+      </div>
+    </div>
+
+    <div class="card auth" id="entrar">
+      <h2 id="authTitle" data-i18n="auth.login"></h2>
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tabLogin" aria-selected="true" data-i18n="auth.tabLogin"></button>
+        <button role="tab" id="tabSignup" aria-selected="false" data-i18n="auth.tabSignup"></button>
+      </div>
+      <form id="form" novalidate>
+        <label for="email" data-i18n="auth.email"></label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="pass" data-i18n="auth.pass"></label>
+        <input id="pass" type="password" autocomplete="current-password" minlength="6" required>
+        <label class="check hidden" id="adultRow"><input type="checkbox" id="adult"> <span data-i18n="auth.adult"></span></label>
+        <button class="btn main" id="go" type="submit" data-i18n="auth.btnLogin"></button>
+        <p class="msg" id="msg" role="status"></p>
+      </form>
+      <div class="below small">
+        <button class="linkbtn" id="forgot" type="button" data-i18n="auth.forgot"></button>
+        <span class="muted" data-i18n="auth.free"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="step"><span class="n">1</span><h3 data-i18n="st1.t"></h3><p data-i18n="st1.p"></p></div>
+    <div class="step"><span class="n">2</span><h3 data-i18n="st2.t"></h3><p data-i18n="st2.p"></p></div>
+    <div class="step"><span class="n">3</span><h3 data-i18n="st3.t"></h3><p data-i18n="st3.p"></p></div>
+  </section>
+
+  <footer><a href="/privacidade" data-i18n="f.privacy"></a> · <span data-i18n="f.tag"></span></footer>
+</div>
+
+<script type="module">
+import { sb } from "/js/sb.js";
+import { t, applyI18n, langPicker, errMsg } from "/js/i18n.js";
+applyI18n();
+document.getElementById("topr").prepend(langPicker());
+const $ = (id) => document.getElementById(id);
+let mode = "login";
+const msg = (s, ok) => { $("msg").textContent = s || ""; $("msg").className = "msg " + (s ? (ok ? "ok" : "err") : ""); };
+
+function setMode(m) {
+  mode = m;
+  const signup = m === "signup";
+  $("tabLogin").setAttribute("aria-selected", String(!signup));
+  $("tabSignup").setAttribute("aria-selected", String(signup));
+  $("authTitle").textContent = t(signup ? "auth.signup" : "auth.login");
+  $("go").textContent = t(signup ? "auth.btnSignup" : "auth.btnLogin");
+  $("adultRow").classList.toggle("hidden", !signup);
+  $("pass").autocomplete = signup ? "new-password" : "current-password";
+  msg("");
+}
+$("tabLogin").onclick = () => setMode("login");
+$("tabSignup").onclick = () => setMode("signup");
+if (location.hash === "#criar") setMode("signup");
+
+let client;
+(async () => {
+  try {
+    client = await sb();
+    const { data: { session } } = await client.auth.getSession();
+    if (session) location.replace("/app");
+    client.auth.onAuthStateChange((ev, s) => { if (s && ev === "SIGNED_IN") location.replace("/app"); });
+  } catch (e) { msg(t("m.config")); }
+})();
+
+$("form").onsubmit = async (ev) => {
+  ev.preventDefault();
+  const email = $("email").value.trim(), password = $("pass").value;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return msg(t("m.badEmail"));
+  if (password.length < 6) return msg(t("m.shortPass"));
+  if (mode === "signup" && !$("adult").checked) return msg(t("m.adult"));
+  if (!client) return msg(t("m.loading"));
+  $("go").disabled = true; msg("");
+  try {
+    if (mode === "login") {
+      const { error } = await client.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      location.replace("/app");
+    } else {
+      const { data, error } = await client.auth.signUp({ email, password, options: { emailRedirectTo: location.origin + "/app" } });
+      if (error) throw error;
+      if (data.session) location.replace("/app");
+      else msg(t("m.created", { email }), true);
+    }
+  } catch (e) { msg(errMsg(e)); }
+  $("go").disabled = false;
+};
+
+$("forgot").onclick = async () => {
+  const email = $("email").value.trim();
+  if (!email) { $("email").focus(); return msg(t("m.forgotNeedEmail")); }
+  if (!client) return msg(t("m.loading"));
+  const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo: location.origin + "/nova-senha" });
+  msg(error ? errMsg(error) : t("m.forgotSent"), !error);
+};
+</script>
+</body>
+</html>
