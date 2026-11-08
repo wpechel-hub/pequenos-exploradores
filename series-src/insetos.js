@@ -1,0 +1,10 @@
+// Insetos e bichinhos em 30 dias
+module.exports = {
+  theme: { sky: "#4A3A12", sky2: "#8A7A2A", bg: "#FAF6E6", line: "#ECE2B8", hero: ["🐝", "🐞", "🦋"], cert: ["🐝", "🔍", "⭐"] },
+  ui: {
+    pt: { title: "Insetos e bichinhos em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "entomologista mirim", Who: "Entomologista Mirim", file: "certificado-insetos.png", listen: "Zum-zum-zum…", beats: ["3", "2", "1!"], c1: "Clube da Lupa: insetos e bichinhos em 30 dias", c2: "Entomologista Mirim", c3: "Certificamos que", c4: "completou a coleção de 30 cartões, das abelhas às aranhas,", c5: "e aprendeu a observar e proteger os pequenos gigantes da natureza!", c6: "Data", c7: "Presidente do Clube da Lupa", s1: "Coleção", s2: "completa", lab: {} },
+    en: { title: "Bugs & Critters in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "junior entomologist", Who: "Junior Entomologist", cheer: "Collection complete", file: "bugs-certificate.png", listen: "Buzz-buzz-buzz…", beats: ["3", "2", "1!"], c1: "Magnifier Club: Bugs & Critters in 30 Days", c2: "Junior Entomologist", c3: "This certifies that", c4: "completed the collection of 30 cards, from bees to spiders,", c5: "and learned to watch and protect nature's little giants!", c6: "Date", c7: "President of the Magnifier Club", s1: "Collection", s2: "complete", lab: {} },
+    es: { title: "Insectos y bichitos en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "entomólogo junior", Who: "Entomólogo Junior", file: "certificado-insectos.png", listen: "Bzz-bzz-bzz…", beats: ["3", "2", "¡1!"], c1: "Club de la Lupa: insectos y bichitos en 30 días", c2: "Entomólogo Junior", c3: "Certificamos que", c4: "completó la colección de 30 tarjetas, de las abejas a las arañas,", c5: "¡y aprendió a observar y proteger a los pequeños gigantes de la naturaleza!", c6: "Fecha", c7: "Presidente del Club de la Lupa", s1: "Colección", s2: "completa", lab: {} },
+  },
+  days: [...require("./insetos-1.js"), ...require("./insetos-2.js"), ...require("./insetos-3.js")],
+};
