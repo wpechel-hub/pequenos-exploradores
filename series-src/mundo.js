@@ -1,0 +1,10 @@
+// História do mundo em 30 dias
+module.exports = {
+  theme: { sky: "#3B2A1A", sky2: "#8A5A24", bg: "#FFF3E0", line: "#EAD7BC", hero: ["🌍", "🏛️", "📜"], cert: ["🌍", "📜", "🏺"] },
+  ui: {
+    pt: { title: "História do mundo em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "explorador do tempo", Who: "Explorador do Tempo", file: "certificado-historia-do-mundo.png", listen: "Abrindo a Caixa do Tempo…", beats: ["3", "2", "1!"], c1: "Missão: história do mundo em 30 dias", c2: "Explorador do Tempo", c3: "Certificamos que", c4: "completou os 30 dias e viajou das cavernas até a internet,", c5: "conhecendo povos, invenções e aventuras do mundo inteiro!", c6: "Data", c7: "Guardião da Caixa do Tempo", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "World History in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "time explorer", Who: "Time Explorer", cheer: "Mission complete", file: "world-history-certificate.png", listen: "Opening the Time Box…", beats: ["3", "2", "1!"], c1: "Mission: World History in 30 Days", c2: "Time Explorer", c3: "This certifies that", c4: "completed all 30 days and traveled from the caves to the internet,", c5: "meeting peoples, inventions and adventures from all over the world!", c6: "Date", c7: "Keeper of the Time Box", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Historia del mundo en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "explorador del tiempo", Who: "Explorador del Tiempo", file: "certificado-historia-del-mundo.png", listen: "Abriendo la Caja del Tiempo…", beats: ["3", "2", "¡1!"], c1: "Misión: historia del mundo en 30 días", c2: "Explorador del Tiempo", c3: "Certificamos que", c4: "completó los 30 días y viajó de las cavernas a internet,", c5: "conociendo pueblos, inventos y aventuras de todo el mundo!", c6: "Fecha", c7: "Guardián de la Caja del Tiempo", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./mundo-1.js"), ...require("./mundo-2.js"), ...require("./mundo-3.js")],
+};

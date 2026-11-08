@@ -1,10 +1,10 @@
 // Service worker: deixa o app abrir rápido e funcionar com internet fraca.
 // Login e banco de dados (Supabase e /api) sempre vão direto para a internet.
-const CACHE = "pe-v2";
+const CACHE = "pe-v3";
 const PRECACHE = [
   "/", "/app", "/espaco", "/corpo", "/bebe", "/privacidade", "/nova-senha",
   "/site.css", "/favicon.svg", "/manifest.webmanifest",
-  "/js/i18n.js", "/js/sb.js", "/js/serie.js", "/js/pwa.js",
+  "/serie", "/js/i18n.js", "/js/sb.js", "/js/serie.js", "/js/pwa.js", "/js/catalog.js",
   "/content/espaco.js", "/content/corpo.js", "/content/bebe.js",
   "/icons/icon-192.png", "/icons/icon-512.png", "/icons/apple-touch-icon.png",
 ];

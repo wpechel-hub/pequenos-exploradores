@@ -29,6 +29,7 @@
 .tile small{color:rgba(255,255,255,.82);font-size:14px}
 .tile.space{background:#1B1E4B}.tile.body{background:#5B1A3A}
 .tile.bonus{grid-column:1/-1;min-height:auto;flex-direction:row;align-items:center;gap:12px;background:#7A2A52;padding:12px 16px}
+.tile.more{grid-column:1/-1;min-height:auto;background:var(--card);color:var(--ink);border:2px dashed var(--line);font-family:"Baloo 2",sans-serif;font-weight:700;font-size:18px;padding:12px 16px;text-align:center;justify-content:center}
 .tile.bonus .e{margin:0;font-size:30px}
 .steps{display:grid;gap:12px;margin:26px 0 6px}
 @media (min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
@@ -59,6 +60,7 @@
         <div class="tile space"><span class="e">🚀</span><b data-i18n="s.espaco"></b><small data-i18n="s.espaco.d"></small></div>
         <div class="tile body"><span class="e">❤️</span><b data-i18n="s.corpo"></b><small data-i18n="s.corpo.d"></small></div>
         <div class="tile bonus"><span class="e">👶</span><span><b data-i18n="s.bebe"></b><br><small data-i18n="s.bebe.d"></small></span></div>
+        <div class="tile more" id="moreTile"></div>
       </div>
     </div>
 
@@ -98,6 +100,7 @@ import { sb } from "/js/sb.js";
 import { t, applyI18n, langPicker, errMsg } from "/js/i18n.js";
 applyI18n();
 document.getElementById("topr").prepend(langPicker());
+import("/js/catalog.js").then(({ readySeries }) => { const n = readySeries().length - 3; const el = document.getElementById("moreTile"); if (n > 0) el.textContent = t("more.series", { n }); else el.remove(); });
 const $ = (id) => document.getElementById(id);
 let mode = "login";
 const msg = (s, ok) => { $("msg").textContent = s || ""; $("msg").className = "msg " + (s ? (ok ? "ok" : "err") : ""); };

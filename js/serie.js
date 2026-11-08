@@ -1,8 +1,9 @@
 // Liga a página de uma série à conta da família: carrega e salva o progresso da criança escolhida.
-import { sb, SERIES, esc } from "/js/sb.js";
-import { t, langPicker } from "/js/i18n.js";
+import { sb, esc } from "/js/sb.js";
+import { SERIES, stitle, sdesc, href } from "/js/catalog.js";
+import { t, langPicker, LANG } from "/js/i18n.js";
 
-const SID = new URL(import.meta.url).searchParams.get("s");
+const SID = new URL(import.meta.url).searchParams.get("s") || new URLSearchParams(location.search).get("s");
 const serie = SERIES.find((s) => s.id === SID);
 const childId = new URLSearchParams(location.search).get("c");
 
@@ -44,24 +45,24 @@ const go = (url) => location.replace(url);
   if (error || !child) { go("/app"); return; }
 
   bar.querySelector(".pe-kid").textContent = "🧒 " + child.name;
-  document.title = t("s." + SID) + " · " + child.name;
+  document.title = stitle(serie, LANG) + " · " + child.name;
   nome.value = child.name; // eslint-disable-line no-undef
 
   // Atalho para o bônus (ex.: bebê dentro do corpo humano)
-  const bonus = SERIES.find((s) => s.bonusOf === SID);
-  if (bonus) {
+  const bonuses = SERIES.filter((s) => s.bonusOf === SID && s.ready);
+  for (const bonus of bonuses) {
     const a = document.createElement("a");
     a.className = "pe-bonus";
-    a.href = `${bonus.page}?c=${encodeURIComponent(childId)}`;
-    a.innerHTML = `<span class="ic">${bonus.emoji}</span><span><b>${esc(t("s." + bonus.id))}</b><small>${esc(t("s." + bonus.id + ".d"))}</small></span><span class="go">→</span>`;
+    a.href = href(bonus, childId);
+    a.innerHTML = `<span class="ic">${bonus.emoji}</span><span><b>${esc(stitle(bonus, LANG))}</b><small>${esc(sdesc(bonus, LANG))}</small></span><span class="go">→</span>`;
     const grid = document.getElementById("grid");
     grid.parentNode.insertBefore(a, document.getElementById("verCert"));
   }
   const parent = serie.bonusOf && SERIES.find((s) => s.id === serie.bonusOf);
   if (parent) {
     const back = bar.querySelector(".pe-back");
-    back.href = `${parent.page}?c=${encodeURIComponent(childId)}`;
-    back.textContent = "← " + t("s." + parent.id);
+    back.href = href(parent, childId);
+    back.textContent = "← " + stitle(parent, LANG);
   }
 
   const { data: row } = await client.from("progress").select("done").eq("child_id", childId).eq("series", SID).maybeSingle();

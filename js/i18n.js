@@ -23,6 +23,7 @@ export function setLang(l) {
 
 const T = {
 pt: {
+  "more.series": "+ {n} séries: história, natureza, como as coisas funcionam e muito mais",
   "pwa.title": "Instale o app", "pwa.install": "Instalar", "pwa.close": "Fechar",
   "pwa.android": "Coloque o Pequenos Exploradores na tela inicial e abra com um toque.",
   "pwa.ios": "No Safari, toque em Compartilhar (quadrado com seta ↑) e depois em “Adicionar à Tela de Início”.",
@@ -72,6 +73,7 @@ pt: {
   "e.generic": "Algo deu errado. Tente de novo.",
 },
 en: {
+  "more.series": "+ {n} more series: history, nature, how things work and lots more",
   "pwa.title": "Install the app", "pwa.install": "Install", "pwa.close": "Close",
   "pwa.android": "Put Little Explorers on your home screen and open it with one tap.",
   "pwa.ios": "In Safari, tap Share (the square with an ↑ arrow), then “Add to Home Screen”.",
@@ -121,6 +123,7 @@ en: {
   "e.generic": "Something went wrong. Please try again.",
 },
 es: {
+  "more.series": "+ {n} series más: historia, naturaleza, cómo funcionan las cosas y mucho más",
   "pwa.title": "Instala la app", "pwa.install": "Instalar", "pwa.close": "Cerrar",
   "pwa.android": "Pon Pequeños Exploradores en tu pantalla de inicio y ábrelo con un toque.",
   "pwa.ios": "En Safari, toca Compartir (el cuadrado con la flecha ↑) y luego “Agregar a inicio”.",

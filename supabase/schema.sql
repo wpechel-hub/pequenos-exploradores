@@ -11,7 +11,7 @@ create index if not exists children_parent_idx on public.children (parent_id);
 
 create table if not exists public.progress (
   child_id uuid not null references public.children (id) on delete cascade,
-  series text not null check (series in ('espaco', 'corpo', 'bebe')),
+  series text not null constraint progress_series_check check (series ~ '^[a-z0-9-]{2,40}$'),
   done smallint[] not null default '{}' check (coalesce(array_length(done, 1), 0) <= 30),
   updated_at timestamptz not null default now(),
   primary key (child_id, series)
