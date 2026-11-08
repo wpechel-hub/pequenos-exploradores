@@ -191,7 +191,7 @@ function open(i){
   panel.innerHTML=`<div class="art">${scene(d,i)}<span class="badge">${U.day} ${i+1}</span><button class="close" aria-label="${U.close}">×</button></div>
   <div class="body"><h2>${d.e} ${d.t}</h2>${d.h?`<div class="box story"><h3>📖 ${U.story}</h3><p style="margin:0">${d.h}</p></div>`:""}<p class="fact">${d.f}</p><p class="extra">${U.know} ${d.x}</p>
   <h3 class="more-t">${U.more}</h3><ul class="more">${d.s.map(t=>`<li>${t}</li>`).join("")}</ul>
-  <div class="box exp"><h3>🔬 ${U.exp}: ${d.ex.t}</h3><p class="mat">${U.need}: ${d.ex.m}</p><ol>${d.ex.p.map(t=>`<li>${t}</li>`).join("")}</ol></div>
+  ${d.ex?`<div class="box exp"><h3>🔬 ${U.exp}: ${d.ex.t}</h3><p class="mat">${U.need}: ${d.ex.m}</p><ol>${d.ex.p.map(t=>`<li>${t}</li>`).join("")}</ol></div>`:""}
   <div class="box act"><h3>✂️ ${U.act}: ${d.at}</h3><p class="mat">${U.need}: ${d.m}</p><ol>${d.p.map(t=>`<li>${t}</li>`).join("")}</ol></div>
   <div class="box ask"><h3>💬 ${U.ask}</h3><p style="margin:0">${d.q}</p></div></div>
   <div class="row"><button class="btn main" id="mark">${isDone?U.unmark:U.markDone+" ⭐"}</button></div>`;
