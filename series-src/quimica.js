@@ -1,0 +1,10 @@
+// Química na cozinha em 30 dias
+module.exports = {
+  theme: { sky: "#2B2D6E", sky2: "#5A6AC2", bg: "#F2F6FC", line: "#D8E2F2", hero: ["🧪", "🍋", "🥚"], cert: ["🧪", "⚗️", "⭐"] },
+  ui: {
+    pt: { title: "Química na cozinha em 30 dias", sub: "Uma historinha, curiosidades, um experimento seguro e uma atividade por dia.", who: "químico mirim", Who: "Químico Mirim", file: "certificado-quimica.png", listen: "Misturando…", beats: ["3", "2", "1!"], c1: "Laboratório: química na cozinha em 30 dias", c2: "Químico Mirim", c3: "Certificamos que", c4: "completou as 30 fichas do Laboratório da Cozinha,", c5: "e descobriu as misturas, reações e cores escondidas em cada receita!", c6: "Data", c7: "Chefe do Laboratório da Cozinha", s1: "Laboratório", s2: "concluído", lab: {} },
+    en: { title: "Kitchen Chemistry in 30 Days", sub: "A story, fun facts, a safe experiment and an activity every day.", who: "junior chemist", Who: "Junior Chemist", cheer: "Lab complete", file: "chemistry-certificate.png", listen: "Mixing…", beats: ["3", "2", "1!"], c1: "Lab: Kitchen Chemistry in 30 Days", c2: "Junior Chemist", c3: "This certifies that", c4: "completed all 30 Kitchen Lab cards,", c5: "and discovered the mixtures, reactions and colors hidden in every recipe!", c6: "Date", c7: "Head of the Kitchen Lab", s1: "Lab", s2: "complete", lab: {} },
+    es: { title: "Química en la cocina en 30 días", sub: "Un cuentito, curiosidades, un experimento seguro y una actividad cada día.", who: "químico junior", Who: "Químico Junior", file: "certificado-quimica.png", listen: "Mezclando…", beats: ["3", "2", "¡1!"], c1: "Laboratorio: química en la cocina en 30 días", c2: "Químico Junior", c3: "Certificamos que", c4: "completó las 30 fichas del Laboratorio de la Cocina,", c5: "¡y descubrió las mezclas, reacciones y colores escondidos en cada receta!", c6: "Fecha", c7: "Jefe del Laboratorio de la Cocina", s1: "Laboratorio", s2: "completado", lab: {} },
+  },
+  days: [...require("./quimica-1.js"), ...require("./quimica-2.js"), ...require("./quimica-3.js")],
+};

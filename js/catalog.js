@@ -17,7 +17,7 @@ export const SERIES = [
   // Espaço e ciência
   S("espaco", "ciencia", "🚀", "#1B1E4B", "#FFC93C", { pt: "30 dias no espaço", en: "30 Days in Space", es: "30 días en el espacio" }, { pt: "Sol, Lua, planetas e buracos negros", en: "The Sun, the Moon, planets and black holes", es: "El Sol, la Luna, planetas y agujeros negros" }, { page: "/espaco", ready: true }),
   S("foguetes", "ciencia", "🛰️", "#20264F", "#8FD3FF", { pt: "Foguetes e viagens espaciais", en: "Rockets & Space Travel", es: "Cohetes y viajes espaciales" }, { pt: "De Sputnik às missões a Marte", en: "From Sputnik to missions to Mars", es: "Del Sputnik a las misiones a Marte" }, { ready: true }),
-  S("quimica", "ciencia", "🧪", "#2B2D6E", "#7BE0C0", { pt: "Química na cozinha", en: "Kitchen Chemistry", es: "Química en la cocina" }, { pt: "Misturas, reações e cores", en: "Mixtures, reactions and colors", es: "Mezclas, reacciones y colores" }),
+  S("quimica", "ciencia", "🧪", "#2B2D6E", "#7BE0C0", { pt: "Química na cozinha", en: "Kitchen Chemistry", es: "Química en la cocina" }, { pt: "Misturas, reações e cores", en: "Mixtures, reactions and colors", es: "Mezclas, reacciones y colores" }, { ready: true }),
   S("matematica", "ciencia", "🔢", "#3A2F7A", "#FFC93C", { pt: "Matemática divertida", en: "Fun Math", es: "Matemática divertida" }, { pt: "Números, formas e truques", en: "Numbers, shapes and tricks", es: "Números, formas y trucos" }),
   // Corpo e mente
   S("corpo", "corpo", "❤️", "#5B1A3A", "#FF6F7F", { pt: "30 dias no corpo humano", en: "30 Days in the Human Body", es: "30 días en el cuerpo humano" }, { pt: "Coração, cérebro, ossos e sentidos", en: "Heart, brain, bones and senses", es: "Corazón, cerebro, huesos y sentidos" }, { page: "/corpo", ready: true }),
