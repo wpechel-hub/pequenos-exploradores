@@ -1,0 +1,10 @@
+// Matemática divertida em 30 dias
+module.exports = {
+  theme: { sky: "#3A2F7A", sky2: "#6A5AC2", bg: "#F6F4FC", line: "#E2DCF2", hero: ["🔢", "📐", "🧮"], cert: ["🔢", "📐", "⭐"] },
+  ui: {
+    pt: { title: "Matemática divertida em 30 dias", sub: "Uma historinha, curiosidades e um desafio por dia, com experimentos quando der para pôr a mão na massa.", who: "matemático mirim", Who: "Matemático Mirim", file: "certificado-matematica.png", listen: "Contando…", beats: ["3", "2", "1!"], c1: "Desafio: matemática divertida em 30 dias", c2: "Matemático Mirim", c3: "Certificamos que", c4: "completou os 30 desafios do Caderno de Desafios,", c5: "e descobriu os números, as formas e os truques escondidos em todo lugar!", c6: "Data", c7: "Guardião do Caderno de Desafios", s1: "Desafio", s2: "concluído", lab: {} },
+    en: { title: "Fun Math in 30 Days", sub: "A story, fun facts and a challenge every day, with hands-on experiments when they fit.", who: "junior mathematician", Who: "Junior Mathematician", cheer: "Challenge complete", file: "math-certificate.png", listen: "Counting…", beats: ["3", "2", "1!"], c1: "Challenge: Fun Math in 30 Days", c2: "Junior Mathematician", c3: "This certifies that", c4: "completed all 30 challenges in the Challenge Notebook,", c5: "and discovered the numbers, shapes and tricks hidden everywhere!", c6: "Date", c7: "Keeper of the Challenge Notebook", s1: "Challenge", s2: "complete", lab: {} },
+    es: { title: "Matemática divertida en 30 días", sub: "Un cuentito, curiosidades y un desafío cada día, con experimentos cuando se puede meter mano.", who: "matemático junior", Who: "Matemático Junior", file: "certificado-matematica.png", listen: "Contando…", beats: ["3", "2", "¡1!"], c1: "Desafío: matemática divertida en 30 días", c2: "Matemático Junior", c3: "Certificamos que", c4: "completó los 30 desafíos del Cuaderno de Desafíos,", c5: "¡y descubrió los números, las formas y los trucos escondidos en todas partes!", c6: "Fecha", c7: "Guardián del Cuaderno de Desafíos", s1: "Desafío", s2: "completado", lab: {} },
+  },
+  days: [...require("./matematica-1.js"), ...require("./matematica-2.js"), ...require("./matematica-3.js")],
+};
