@@ -1,0 +1,10 @@
+// Animais do mundo em 30 dias
+module.exports = {
+  theme: { sky: "#5A3A14", sky2: "#A0742C", bg: "#FAF4E8", line: "#EADCC0", hero: ["🦁", "🐘", "🦒"], cert: ["🦁", "🐾", "⭐"] },
+  ui: {
+    pt: { title: "Animais do mundo em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "guarda-parque mirim", Who: "Guarda-Parque Mirim", file: "certificado-animais.png", listen: "Pegadas na trilha…", beats: ["3", "2", "1!"], c1: "Expedição: animais do mundo em 30 dias", c2: "Guarda-Parque Mirim", c3: "Certificamos que", c4: "completou as 30 páginas do caderno de campo, da savana aos polos,", c5: "e aprendeu a conhecer, respeitar e proteger os animais do mundo!", c6: "Data", c7: "Chefe da Expedição", s1: "Expedição", s2: "concluída", lab: {} },
+    en: { title: "Animals of the World in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "junior ranger", Who: "Junior Ranger", cheer: "Expedition complete", file: "animals-certificate.png", listen: "Tracks on the trail…", beats: ["3", "2", "1!"], c1: "Expedition: Animals of the World in 30 Days", c2: "Junior Ranger", c3: "This certifies that", c4: "completed all 30 pages of the field journal, from the savanna to the poles,", c5: "and learned to know, respect and protect the animals of the world!", c6: "Date", c7: "Expedition Leader", s1: "Expedition", s2: "complete", lab: {} },
+    es: { title: "Animales del mundo en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "guardaparque junior", Who: "Guardaparque Junior", file: "certificado-animales.png", listen: "Huellas en el sendero…", beats: ["3", "2", "¡1!"], c1: "Expedición: animales del mundo en 30 días", c2: "Guardaparque Junior", c3: "Certificamos que", c4: "completó las 30 páginas del cuaderno de campo, de la sabana a los polos,", c5: "¡y aprendió a conocer, respetar y proteger a los animales del mundo!", c6: "Fecha", c7: "Jefe de la Expedición", s1: "Expedición", s2: "completada", lab: {} },
+  },
+  days: [...require("./animais-1.js"), ...require("./animais-2.js"), ...require("./animais-3.js")],
+};
