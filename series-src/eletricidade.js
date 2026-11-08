@@ -1,0 +1,10 @@
+// Eletricidade em 30 dias
+module.exports = {
+  theme: { sky: "#2A2350", sky2: "#5A4AA0", bg: "#FFFBEA", line: "#EFE3B8", hero: ["⚡", "💡", "🔋"], cert: ["⚡", "💡", "🧲"] },
+  ui: {
+    pt: { title: "Eletricidade em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "cientista das faíscas", Who: "Cientista das Faíscas", file: "certificado-eletricidade.png", listen: "Ligando a energia…", beats: ["3", "2", "1!"], c1: "Missão: eletricidade em 30 dias", c2: "Cientista das Faíscas", c3: "Certificamos que", c4: "completou os 30 dias e descobriu ímãs, pilhas, raios e circuitos,", c5: "sempre com muita curiosidade e muita segurança!", c6: "Data", c7: "Chefe do Laboratório", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "Electricity in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "spark scientist", Who: "Spark Scientist", cheer: "Mission complete", file: "electricity-certificate.png", listen: "Powering up…", beats: ["3", "2", "1!"], c1: "Mission: Electricity in 30 Days", c2: "Spark Scientist", c3: "This certifies that", c4: "completed all 30 days and discovered magnets, batteries, lightning and circuits,", c5: "always with lots of curiosity and lots of safety!", c6: "Date", c7: "Head of the Lab", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Electricidad en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "científico de las chispas", Who: "Científico de las Chispas", file: "certificado-electricidad.png", listen: "Encendiendo la energía…", beats: ["3", "2", "¡1!"], c1: "Misión: electricidad en 30 días", c2: "Científico de las Chispas", c3: "Certificamos que", c4: "completó los 30 días y descubrió imanes, pilas, rayos y circuitos,", c5: "¡siempre con mucha curiosidad y mucha seguridad!", c6: "Fecha", c7: "Jefe del Laboratorio", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./eletricidade-1.js"), ...require("./eletricidade-2.js"), ...require("./eletricidade-3.js")],
+};
