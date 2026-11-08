@@ -45,7 +45,7 @@ export const SERIES = [
   S("exploradores", "historia", "🧭", "#1E3A4A", "#FFC93C", { pt: "Grandes exploradores", en: "Great Explorers", es: "Grandes exploradores" }, { pt: "Viagens que mudaram o mapa", en: "Journeys that changed the map", es: "Viajes que cambiaron el mapa" }),
   S("inventores", "historia", "💡", "#3A2E14", "#FFC93C", { pt: "Inventores e invenções", en: "Inventors & Inventions", es: "Inventores e inventos" }, { pt: "Ideias que mudaram o mundo", en: "Ideas that changed the world", es: "Ideas que cambiaron el mundo" }),
   // Como funciona
-  S("aviao", "como", "✈️", "#1B3A6B", "#8FD3FF", { pt: "O avião", en: "Airplanes", es: "El avión" }, { pt: "A história e como ele voa", en: "Their history and how they fly", es: "Su historia y cómo vuela" }),
+  S("aviao", "como", "✈️", "#1B3A6B", "#8FD3FF", { pt: "O avião", en: "Airplanes", es: "El avión" }, { pt: "A história e como ele voa", en: "Their history and how they fly", es: "Su historia y cómo vuela" }, { ready: true }),
   S("eletricidade", "como", "⚡", "#2A2350", "#FFD43B", { pt: "Eletricidade", en: "Electricity", es: "Electricidad" }, { pt: "Ímãs, pilhas, raios e circuitos", en: "Magnets, batteries, lightning and circuits", es: "Imanes, pilas, rayos y circuitos" }),
   S("tecnologia", "como", "📱", "#1E2E4A", "#7BE0C0", { pt: "Celular, internet e computadores", en: "Phones, Internet & Computers", es: "Celular, internet y computadoras" }, { pt: "Como a tecnologia funciona", en: "How technology works", es: "Cómo funciona la tecnología" }),
   S("transportes", "como", "🚂", "#4A2418", "#FFC93C", { pt: "Carros, trens e navios", en: "Cars, Trains & Ships", es: "Autos, trenes y barcos" }, { pt: "Como as coisas se movem", en: "How things move", es: "Cómo se mueven las cosas" }),
