@@ -1,0 +1,10 @@
+// Emoções em 30 dias
+module.exports = {
+  theme: { sky: "#4A2C6B", sky2: "#8A5AB0", bg: "#FBF4FA", line: "#EDDCEB", hero: ["💛", "😊", "🌈"], cert: ["💛", "🌈", "⭐"] },
+  ui: {
+    pt: { title: "Emoções em 30 dias", sub: "Uma historinha, curiosidades e uma atividade por dia para conhecer o que sentimos.", who: "explorador das emoções", Who: "Explorador das Emoções", file: "certificado-emocoes.png", listen: "Respira fundo…", beats: ["3", "2", "1!"], c1: "Jornada: emoções em 30 dias", c2: "Explorador das Emoções", c3: "Certificamos que", c4: "completou as 30 páginas do Diário do Coração,", c5: "e aprendeu a reconhecer, nomear e cuidar das próprias emoções e das dos outros!", c6: "Data", c7: "Guardião do Diário do Coração", s1: "Jornada", s2: "concluída", lab: {} },
+    en: { title: "Feelings in 30 Days", sub: "A story, fun facts and an activity every day to understand what we feel.", who: "feelings explorer", Who: "Feelings Explorer", cheer: "Journey complete", file: "feelings-certificate.png", listen: "Deep breath…", beats: ["3", "2", "1!"], c1: "Journey: Feelings in 30 Days", c2: "Feelings Explorer", c3: "This certifies that", c4: "completed all 30 pages of the Heart Journal,", c5: "and learned to recognize, name and care for their own feelings and other people's!", c6: "Date", c7: "Keeper of the Heart Journal", s1: "Journey", s2: "complete", lab: {} },
+    es: { title: "Emociones en 30 días", sub: "Un cuentito, curiosidades y una actividad cada día para conocer lo que sentimos.", who: "explorador de las emociones", Who: "Explorador de las Emociones", file: "certificado-emociones.png", listen: "Respira hondo…", beats: ["3", "2", "¡1!"], c1: "Viaje: emociones en 30 días", c2: "Explorador de las Emociones", c3: "Certificamos que", c4: "completó las 30 páginas del Diario del Corazón,", c5: "¡y aprendió a reconocer, nombrar y cuidar sus propias emociones y las de los demás!", c6: "Fecha", c7: "Guardián del Diario del Corazón", s1: "Viaje", s2: "completado", lab: {} },
+  },
+  days: [...require("./emocoes-1.js"), ...require("./emocoes-2.js"), ...require("./emocoes-3.js")],
+};
