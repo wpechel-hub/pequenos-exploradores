@@ -1,0 +1,10 @@
+// História do Brasil em 30 dias
+module.exports = {
+  theme: { sky: "#0B4F2C", sky2: "#1E8C4E", bg: "#F1FAEC", line: "#D6EBCB", hero: ["🦜", "🌳", "☀️"], cert: ["🦜", "🌳", "⭐"] },
+  ui: {
+    pt: { title: "História do Brasil em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "explorador do Brasil", Who: "Explorador do Brasil", file: "certificado-historia-do-brasil.png", listen: "Abrindo o Álbum do Brasil…", beats: ["3", "2", "1!"], c1: "Missão: história do Brasil em 30 dias", c2: "Explorador do Brasil", c3: "Certificamos que", c4: "completou os 30 dias e conheceu a história do Brasil,", c5: "dos primeiros povos até os dias de hoje!", c6: "Data", c7: "Guardião do Álbum", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "History of Brazil in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "Brazil explorer", Who: "Brazil Explorer", cheer: "Mission complete", file: "history-of-brazil-certificate.png", listen: "Opening the Brazil Album…", beats: ["3", "2", "1!"], c1: "Mission: History of Brazil in 30 Days", c2: "Brazil Explorer", c3: "This certifies that", c4: "completed all 30 days and learned the history of Brazil,", c5: "from its first peoples all the way to today!", c6: "Date", c7: "Keeper of the Album", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Historia de Brasil en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "explorador de Brasil", Who: "Explorador de Brasil", file: "certificado-historia-de-brasil.png", listen: "Abriendo el Álbum de Brasil…", beats: ["3", "2", "¡1!"], c1: "Misión: historia de Brasil en 30 días", c2: "Explorador de Brasil", c3: "Certificamos que", c4: "completó los 30 días y conoció la historia de Brasil,", c5: "¡desde sus primeros pueblos hasta hoy!", c6: "Fecha", c7: "Guardián del Álbum", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./brasil-1.js"), ...require("./brasil-2.js"), ...require("./brasil-3.js")],
+};
