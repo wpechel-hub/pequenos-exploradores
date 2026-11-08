@@ -1,0 +1,10 @@
+// História dos Estados Unidos em 30 dias
+module.exports = {
+  theme: { sky: "#1C2E5C", sky2: "#3A5AA0", bg: "#EEF3FF", line: "#D3DDF2", hero: ["🗽", "🦅", "⭐"], cert: ["🗽", "🦅", "📮"] },
+  ui: {
+    pt: { title: "História dos Estados Unidos em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "viajante da história", Who: "Viajante da História", file: "certificado-historia-dos-eua.png", listen: "Pegando a estrada…", beats: ["3", "2", "1!"], c1: "Missão: história dos Estados Unidos em 30 dias", c2: "Viajante da História", c3: "Certificamos que", c4: "completou os 30 dias e atravessou a história dos Estados Unidos,", c5: "das primeiras nações nativas até a era da internet!", c6: "Data", c7: "Guia da Viagem", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "U.S. History in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "history traveler", Who: "History Traveler", cheer: "Mission complete", file: "us-history-certificate.png", listen: "Hitting the road…", beats: ["3", "2", "1!"], c1: "Mission: U.S. History in 30 Days", c2: "History Traveler", c3: "This certifies that", c4: "completed all 30 days and traveled through the history of the United States,", c5: "from the first Native nations to the age of the internet!", c6: "Date", c7: "Trip Guide", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Historia de Estados Unidos en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "viajero de la historia", Who: "Viajero de la Historia", file: "certificado-historia-de-eeuu.png", listen: "Saliendo a la ruta…", beats: ["3", "2", "¡1!"], c1: "Misión: historia de Estados Unidos en 30 días", c2: "Viajero de la Historia", c3: "Certificamos que", c4: "completó los 30 días y recorrió la historia de Estados Unidos,", c5: "¡desde las primeras naciones nativas hasta la era de internet!", c6: "Fecha", c7: "Guía del Viaje", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./eua-1.js"), ...require("./eua-2.js"), ...require("./eua-3.js")],
+};
