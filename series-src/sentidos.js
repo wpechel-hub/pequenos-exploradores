@@ -1,0 +1,10 @@
+// Nossos sentidos em 15 dias (bônus do corpo humano)
+module.exports = {
+  theme: { sky: "#2D1B4E", sky2: "#6B3FA0", bg: "#F5EEFF", line: "#E2D4F5", hero: ["👀", "👂", "👃"], cert: ["👁️", "👅", "✋"] },
+  ui: {
+    pt: { title: "Nossos sentidos em 15 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "detetive dos sentidos", Who: "Detetive dos Sentidos", file: "certificado-sentidos.png", listen: "Ligando os sentidos…", beats: ["3", "2", "1!"], c1: "Missão: nossos sentidos em 15 dias", c2: "Detetive dos Sentidos", c3: "Certificamos que", c4: "completou os 15 dias e descobriu como vemos, ouvimos,", c5: "cheiramos, provamos e sentimos o mundo ao nosso redor!", c6: "Data", c7: "Chefe dos Detetives", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "Our Senses in 15 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "sense detective", Who: "Sense Detective", cheer: "Mission complete", file: "senses-certificate.png", listen: "Switching on the senses…", beats: ["3", "2", "1!"], c1: "Mission: Our Senses in 15 Days", c2: "Sense Detective", c3: "This certifies that", c4: "completed all 15 days and discovered how we see, hear,", c5: "smell, taste and feel the world around us!", c6: "Date", c7: "Chief Detective", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Nuestros sentidos en 15 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "detective de los sentidos", Who: "Detective de los Sentidos", file: "certificado-sentidos.png", listen: "Encendiendo los sentidos…", beats: ["3", "2", "¡1!"], c1: "Misión: nuestros sentidos en 15 días", c2: "Detective de los Sentidos", c3: "Certificamos que", c4: "completó los 15 días y descubrió cómo vemos, oímos,", c5: "olemos, saboreamos y sentimos el mundo que nos rodea!", c6: "Fecha", c7: "Jefe de Detectives", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./sentidos-1.js"), ...require("./sentidos-2.js")],
+};
