@@ -1,0 +1,10 @@
+// O fundo do mar em 30 dias
+module.exports = {
+  theme: { sky: "#0F3D5E", sky2: "#2C8AB0", bg: "#EAF6FA", line: "#C8E4EE", hero: ["🐳", "🐠", "🪸"], cert: ["🐳", "🐙", "🐠"] },
+  ui: {
+    pt: { title: "O fundo do mar em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "explorador dos oceanos", Who: "Explorador dos Oceanos", file: "certificado-fundo-do-mar.png", listen: "Preparando o mergulho…", beats: ["3", "2", "1!"], c1: "Missão: o fundo do mar em 30 dias", c2: "Explorador dos Oceanos", c3: "Certificamos que", c4: "completou os 30 mergulhos e explorou o oceano da praia ao abismo,", c5: "conhecendo baleias, corais e criaturas misteriosas!", c6: "Data", c7: "Capitão do Submarino", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "Under the Sea in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "ocean explorer", Who: "Ocean Explorer", cheer: "Mission complete", file: "under-the-sea-certificate.png", listen: "Getting ready to dive…", beats: ["3", "2", "1!"], c1: "Mission: Under the Sea in 30 Days", c2: "Ocean Explorer", c3: "This certifies that", c4: "completed all 30 dives and explored the ocean from the beach to the abyss,", c5: "meeting whales, corals and mysterious creatures!", c6: "Date", c7: "Submarine Captain", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "El fondo del mar en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "explorador de los océanos", Who: "Explorador de los Océanos", file: "certificado-fondo-del-mar.png", listen: "Preparando la inmersión…", beats: ["3", "2", "¡1!"], c1: "Misión: el fondo del mar en 30 días", c2: "Explorador de los Océanos", c3: "Certificamos que", c4: "completó las 30 inmersiones y exploró el océano de la playa al abismo,", c5: "¡conociendo ballenas, corales y criaturas misteriosas!", c6: "Fecha", c7: "Capitán del Submarino", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./mar-1.js"), ...require("./mar-2.js"), ...require("./mar-3.js")],
+};
