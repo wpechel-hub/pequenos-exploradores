@@ -1,0 +1,10 @@
+// Grandes artistas em 30 dias
+module.exports = {
+  theme: { sky: "#4A1E4A", sky2: "#A04AA0", bg: "#FCF4FA", line: "#F0DCEC", hero: ["🎨", "🖌️", "🖼️"], cert: ["🎨", "🖼️", "⭐"] },
+  ui: {
+    pt: { title: "Grandes artistas em 30 dias", sub: "Uma historinha, curiosidades e uma obra de arte para criar por dia.", who: "artista mirim", Who: "Artista Mirim", file: "certificado-artistas.png", listen: "Preparando os pincéis…", beats: ["3", "2", "1!"], c1: "Ateliê: grandes artistas em 30 dias", c2: "Artista Mirim", c3: "Certificamos que", c4: "criou as 30 obras da Galeria do Ateliê, das cavernas à arte de hoje,", c5: "e descobriu que todo mundo pode criar arte do seu jeito!", c6: "Data", c7: "Curador da Galeria do Ateliê", s1: "Galeria", s2: "inaugurada", lab: {} },
+    en: { title: "Great Artists in 30 Days", sub: "A story, fun facts and a work of art to create every day.", who: "junior artist", Who: "Junior Artist", cheer: "Gallery open", file: "artists-certificate.png", listen: "Getting the brushes ready…", beats: ["3", "2", "1!"], c1: "Studio: Great Artists in 30 Days", c2: "Junior Artist", c3: "This certifies that", c4: "created all 30 works for the Studio Gallery, from cave paintings to the art of today,", c5: "and discovered that everyone can make art in their own way!", c6: "Date", c7: "Curator of the Studio Gallery", s1: "Gallery", s2: "open", lab: {} },
+    es: { title: "Grandes artistas en 30 días", sub: "Un cuentito, curiosidades y una obra de arte para crear cada día.", who: "artista junior", Who: "Artista Junior", file: "certificado-artistas.png", listen: "Preparando los pinceles…", beats: ["3", "2", "¡1!"], c1: "Taller: grandes artistas en 30 días", c2: "Artista Junior", c3: "Certificamos que", c4: "creó las 30 obras de la Galería del Taller, de las cavernas al arte de hoy,", c5: "¡y descubrió que todos podemos crear arte a nuestra manera!", c6: "Fecha", c7: "Curador de la Galería del Taller", s1: "Galería", s2: "inaugurada", lab: {} },
+  },
+  days: [...require("./artistas-1.js"), ...require("./artistas-2.js"), ...require("./artistas-3.js")],
+};
