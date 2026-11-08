@@ -55,7 +55,7 @@ export const SERIES = [
   S("paises", "mundo", "🗺️", "#1E4A5A", "#FFC93C", { pt: "Volta ao mundo", en: "Around the World", es: "La vuelta al mundo" }, { pt: "Um país por dia", en: "One country a day", es: "Un país por día" }),
   S("artistas", "mundo", "🎨", "#4A1E4A", "#FFC93C", { pt: "Grandes artistas", en: "Great Artists", es: "Grandes artistas" }, { pt: "Conheça e pinte igual", en: "Meet them and paint like them", es: "Conócelos y pinta como ellos" }),
   S("musica", "mundo", "🎵", "#2A1E4A", "#FF9FB2", { pt: "Música e instrumentos", en: "Music & Instruments", es: "Música e instrumentos" }, { pt: "Como o som vira música", en: "How sound becomes music", es: "Cómo el sonido se vuelve música" }),
-  S("dinheiro", "mundo", "💰", "#1E4A2E", "#FFD43B", { pt: "Dinheiro para crianças", en: "Money for Kids", es: "Dinero para niños" }, { pt: "Ganhar, poupar, gastar e doar", en: "Earn, save, spend and share", es: "Ganar, ahorrar, gastar y compartir" }),
+  S("dinheiro", "mundo", "💰", "#1E4A2E", "#FFD43B", { pt: "Dinheiro para crianças", en: "Money for Kids", es: "Dinero para niños" }, { pt: "Ganhar, poupar, gastar e doar", en: "Earn, save, spend and share", es: "Ganar, ahorrar, gastar y compartir" }, { ready: true }),
 ];
 
 export function stitle(s, lang) { return s.t[lang] || s.t.pt; }

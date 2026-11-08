@@ -1,0 +1,10 @@
+// Dinheiro para crianças em 30 dias
+module.exports = {
+  theme: { sky: "#1E4A2E", sky2: "#3A8A5A", bg: "#F2FAF4", line: "#D4ECDA", hero: ["🐷", "💰", "💵"], cert: ["🐷", "💰", "⭐"] },
+  ui: {
+    pt: { title: "Dinheiro para crianças em 30 dias", sub: "Uma historinha, curiosidades e uma atividade por dia para aprender a ganhar, poupar, gastar e doar.", who: "mestre do cofrinho", Who: "Mestre do Cofrinho", file: "certificado-dinheiro.png", listen: "Plim, plim…", beats: ["3", "2", "1!"], c1: "Jornada: dinheiro para crianças em 30 dias", c2: "Mestre do Cofrinho", c3: "Certificamos que", c4: "completou as 30 páginas do Caderno do Cofrinho,", c5: "e aprendeu a ganhar, poupar, gastar com sabedoria e compartilhar!", c6: "Data", c7: "Tesoureiro da Família", s1: "Jornada", s2: "concluída", lab: {} },
+    en: { title: "Money for Kids in 30 Days", sub: "A story, fun facts and an activity every day to learn to earn, save, spend and share.", who: "piggy bank master", Who: "Piggy Bank Master", cheer: "Journey complete", file: "money-certificate.png", listen: "Clink, clink…", beats: ["3", "2", "1!"], c1: "Journey: Money for Kids in 30 Days", c2: "Piggy Bank Master", c3: "This certifies that", c4: "completed all 30 pages of the Piggy Bank Notebook,", c5: "and learned to earn, save, spend wisely and share!", c6: "Date", c7: "Family Treasurer", s1: "Journey", s2: "complete", lab: {} },
+    es: { title: "Dinero para niños en 30 días", sub: "Un cuentito, curiosidades y una actividad cada día para aprender a ganar, ahorrar, gastar y compartir.", who: "maestro de la alcancía", Who: "Maestro de la Alcancía", file: "certificado-dinero.png", listen: "Clin, clin…", beats: ["3", "2", "¡1!"], c1: "Viaje: dinero para niños en 30 días", c2: "Maestro de la Alcancía", c3: "Certificamos que", c4: "completó las 30 páginas del Cuaderno de la Alcancía,", c5: "¡y aprendió a ganar, ahorrar, gastar con sabiduría y compartir!", c6: "Fecha", c7: "Tesorero de la Familia", s1: "Viaje", s2: "completado", lab: {} },
+  },
+  days: [...require("./dinheiro-1.js"), ...require("./dinheiro-2.js"), ...require("./dinheiro-3.js")],
+};
