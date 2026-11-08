@@ -1,0 +1,10 @@
+// Nosso planeta Terra em 30 dias
+module.exports = {
+  theme: { sky: "#14466B", sky2: "#2C8AA0", bg: "#EEF8F5", line: "#CFE8DF", hero: ["🌎", "🌋", "🌊"], cert: ["🌎", "🏔️", "🌊"] },
+  ui: {
+    pt: { title: "Nosso planeta Terra em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "guardião do planeta", Who: "Guardião do Planeta", file: "certificado-planeta-terra.png", listen: "Girando o globo…", beats: ["3", "2", "1!"], c1: "Missão: nosso planeta Terra em 30 dias", c2: "Guardião do Planeta", c3: "Certificamos que", c4: "completou os 30 dias e explorou a Terra de dentro para fora,", c5: "do centro quente até o céu, passando por mares, montanhas e florestas!", c6: "Data", c7: "Comandante do Globo", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "Our Planet Earth in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "planet guardian", Who: "Planet Guardian", cheer: "Mission complete", file: "planet-earth-certificate.png", listen: "Spinning the globe…", beats: ["3", "2", "1!"], c1: "Mission: Our Planet Earth in 30 Days", c2: "Planet Guardian", c3: "This certifies that", c4: "completed all 30 days and explored the Earth inside and out,", c5: "from its hot core up to the sky, through seas, mountains and forests!", c6: "Date", c7: "Globe Commander", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Nuestro planeta Tierra en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "guardián del planeta", Who: "Guardián del Planeta", file: "certificado-planeta-tierra.png", listen: "Girando el globo…", beats: ["3", "2", "¡1!"], c1: "Misión: nuestro planeta Tierra en 30 días", c2: "Guardián del Planeta", c3: "Certificamos que", c4: "completó los 30 días y exploró la Tierra por dentro y por fuera,", c5: "¡desde su centro caliente hasta el cielo, pasando por mares, montañas y bosques!", c6: "Fecha", c7: "Comandante del Globo", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./terra-1.js"), ...require("./terra-2.js"), ...require("./terra-3.js")],
+};
