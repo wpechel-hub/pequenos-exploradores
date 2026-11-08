@@ -1,0 +1,10 @@
+// De onde vem a comida em 30 dias
+module.exports = {
+  theme: { sky: "#24543A", sky2: "#4A8A5A", bg: "#F4FAF2", line: "#DCEBD6", hero: ["🥦", "🌽", "🍎"], cert: ["🥕", "🌾", "⭐"] },
+  ui: {
+    pt: { title: "De onde vem a comida em 30 dias", sub: "Uma historinha, curiosidades e uma atividade por dia, com experimentos quando der para pôr a mão na terra.", who: "explorador da comida", Who: "Explorador da Comida", file: "certificado-comida.png", listen: "Colhendo…", beats: ["3", "2", "1!"], c1: "Jornada: de onde vem a comida em 30 dias", c2: "Explorador da Comida", c3: "Certificamos que", c4: "completou as 30 colheitas do Caderno do Campo,", c5: "e descobriu o caminho dos alimentos, da semente até o prato!", c6: "Data", c7: "Guardião do Caderno do Campo", s1: "Jornada", s2: "concluída", lab: {} },
+    en: { title: "Where Food Comes From in 30 Days", sub: "A story, fun facts and an activity every day, with hands-on experiments when they fit.", who: "food explorer", Who: "Food Explorer", cheer: "Journey complete", file: "food-certificate.png", listen: "Harvesting…", beats: ["3", "2", "1!"], c1: "Journey: Where Food Comes From in 30 Days", c2: "Food Explorer", c3: "This certifies that", c4: "completed all 30 harvests in the Farm Notebook,", c5: "and discovered the journey food takes, from seed to plate!", c6: "Date", c7: "Keeper of the Farm Notebook", s1: "Journey", s2: "complete", lab: {} },
+    es: { title: "De dónde viene la comida en 30 días", sub: "Un cuentito, curiosidades y una actividad cada día, con experimentos cuando se puede meter mano en la tierra.", who: "explorador de la comida", Who: "Explorador de la Comida", file: "certificado-comida.png", listen: "Cosechando…", beats: ["3", "2", "¡1!"], c1: "Viaje: de dónde viene la comida en 30 días", c2: "Explorador de la Comida", c3: "Certificamos que", c4: "completó las 30 cosechas del Cuaderno del Campo,", c5: "¡y descubrió el camino de los alimentos, de la semilla al plato!", c6: "Fecha", c7: "Guardián del Cuaderno del Campo", s1: "Viaje", s2: "completado", lab: {} },
+  },
+  days: [...require("./alimentacao-1.js"), ...require("./alimentacao-2.js"), ...require("./alimentacao-3.js")],
+};
