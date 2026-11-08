@@ -1,0 +1,10 @@
+// Foguetes e viagens espaciais em 30 dias
+module.exports = {
+  theme: { sky: "#20264F", sky2: "#4A5AA0", bg: "#EEF0FA", line: "#D3D8F0", hero: ["🚀", "🛰️", "🌕"], cert: ["🚀", "🌕", "⭐"] },
+  ui: {
+    pt: { title: "Foguetes e viagens espaciais em 30 dias", sub: "Uma historinha, curiosidades, um experimento e uma atividade por dia.", who: "diretor de voo", Who: "Diretor de Voo", file: "certificado-foguetes.png", listen: "Contagem regressiva…", beats: ["3", "2", "1!"], c1: "Missão: foguetes e viagens espaciais em 30 dias", c2: "Diretor de Voo", c3: "Certificamos que", c4: "completou as 30 missões, do Sputnik até Marte,", c5: "e descobriu como os foguetes levam a humanidade ao espaço!", c6: "Data", c7: "Comandante do Centro de Controle", s1: "Missão", s2: "cumprida", lab: {} },
+    en: { title: "Rockets & Space Travel in 30 Days", sub: "A story, fun facts, an experiment and an activity every day.", who: "flight director", Who: "Flight Director", cheer: "Mission complete", file: "rockets-certificate.png", listen: "Countdown…", beats: ["3", "2", "1!"], c1: "Mission: Rockets & Space Travel in 30 Days", c2: "Flight Director", c3: "This certifies that", c4: "completed all 30 missions, from Sputnik to Mars,", c5: "and discovered how rockets carry humanity into space!", c6: "Date", c7: "Mission Control Commander", s1: "Mission", s2: "complete", lab: {} },
+    es: { title: "Cohetes y viajes espaciales en 30 días", sub: "Un cuentito, curiosidades, un experimento y una actividad cada día.", who: "director de vuelo", Who: "Director de Vuelo", file: "certificado-cohetes.png", listen: "Cuenta regresiva…", beats: ["3", "2", "¡1!"], c1: "Misión: cohetes y viajes espaciales en 30 días", c2: "Director de Vuelo", c3: "Certificamos que", c4: "completó las 30 misiones, del Sputnik a Marte,", c5: "¡y descubrió cómo los cohetes llevan a la humanidad al espacio!", c6: "Fecha", c7: "Comandante del Centro de Control", s1: "Misión", s2: "cumplida", lab: {} },
+  },
+  days: [...require("./foguetes-1.js"), ...require("./foguetes-2.js"), ...require("./foguetes-3.js")],
+};

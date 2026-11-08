@@ -16,7 +16,7 @@ const S = (id, cat, emoji, bg, accent, t, d, extra = {}) => ({ id, cat, emoji, b
 export const SERIES = [
   // Espaço e ciência
   S("espaco", "ciencia", "🚀", "#1B1E4B", "#FFC93C", { pt: "30 dias no espaço", en: "30 Days in Space", es: "30 días en el espacio" }, { pt: "Sol, Lua, planetas e buracos negros", en: "The Sun, the Moon, planets and black holes", es: "El Sol, la Luna, planetas y agujeros negros" }, { page: "/espaco", ready: true }),
-  S("foguetes", "ciencia", "🛰️", "#20264F", "#8FD3FF", { pt: "Foguetes e viagens espaciais", en: "Rockets & Space Travel", es: "Cohetes y viajes espaciales" }, { pt: "De Sputnik às missões a Marte", en: "From Sputnik to missions to Mars", es: "Del Sputnik a las misiones a Marte" }),
+  S("foguetes", "ciencia", "🛰️", "#20264F", "#8FD3FF", { pt: "Foguetes e viagens espaciais", en: "Rockets & Space Travel", es: "Cohetes y viajes espaciales" }, { pt: "De Sputnik às missões a Marte", en: "From Sputnik to missions to Mars", es: "Del Sputnik a las misiones a Marte" }, { ready: true }),
   S("quimica", "ciencia", "🧪", "#2B2D6E", "#7BE0C0", { pt: "Química na cozinha", en: "Kitchen Chemistry", es: "Química en la cocina" }, { pt: "Misturas, reações e cores", en: "Mixtures, reactions and colors", es: "Mezclas, reacciones y colores" }),
   S("matematica", "ciencia", "🔢", "#3A2F7A", "#FFC93C", { pt: "Matemática divertida", en: "Fun Math", es: "Matemática divertida" }, { pt: "Números, formas e truques", en: "Numbers, shapes and tricks", es: "Números, formas y trucos" }),
   // Corpo e mente
