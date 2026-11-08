@@ -1,0 +1,10 @@
+// Música e instrumentos em 30 dias
+module.exports = {
+  theme: { sky: "#2A1E4A", sky2: "#6A4AA0", bg: "#F7F3FC", line: "#E4DCF2", hero: ["🎵", "🥁", "🎸"], cert: ["🎵", "🎻", "⭐"] },
+  ui: {
+    pt: { title: "Música e instrumentos em 30 dias", sub: "Uma historinha, curiosidades, experiências com som e uma atividade por dia.", who: "maestro mirim", Who: "Maestro Mirim", file: "certificado-musica.png", listen: "Afinando…", beats: ["1", "2", "3, 4!"], c1: "Turnê: música e instrumentos em 30 dias", c2: "Maestro Mirim", c3: "Certificamos que", c4: "completou os 30 ensaios da Banda Pipoca,", c5: "e descobriu como o som vira música, do tambor à orquestra!", c6: "Data", c7: "Regente da Banda Pipoca", s1: "Turnê", s2: "concluída", lab: {} },
+    en: { title: "Music & Instruments in 30 Days", sub: "A story, fun facts, sound experiments and an activity every day.", who: "junior conductor", Who: "Junior Conductor", cheer: "Tour complete", file: "music-certificate.png", listen: "Tuning up…", beats: ["1", "2", "3, 4!"], c1: "Tour: Music & Instruments in 30 Days", c2: "Junior Conductor", c3: "This certifies that", c4: "completed all 30 rehearsals of the Popcorn Band,", c5: "and discovered how sound becomes music, from drums to the orchestra!", c6: "Date", c7: "Conductor of the Popcorn Band", s1: "Tour", s2: "complete", lab: {} },
+    es: { title: "Música e instrumentos en 30 días", sub: "Un cuentito, curiosidades, experimentos con sonido y una actividad cada día.", who: "director de orquesta junior", Who: "Director de Orquesta Junior", file: "certificado-musica.png", listen: "Afinando…", beats: ["1", "2", "¡3, 4!"], c1: "Gira: música e instrumentos en 30 días", c2: "Director de Orquesta Junior", c3: "Certificamos que", c4: "completó los 30 ensayos de la Banda Palomita,", c5: "¡y descubrió cómo el sonido se convierte en música, del tambor a la orquesta!", c6: "Fecha", c7: "Director de la Banda Palomita", s1: "Gira", s2: "completada", lab: {} },
+  },
+  days: [...require("./musica-1.js"), ...require("./musica-2.js"), ...require("./musica-3.js")],
+};
